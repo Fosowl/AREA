@@ -1,0 +1,165 @@
+@use "Theme/colors";
+@use "Theme/commons";
+
+.home-page {
+  @include commons.basic-page;
+}
+
+.widget-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.widget {
+  @include commons.basic-shadow;
+
+  width: 90%;
+  margin: auto;
+
+  background-color: colors.$primary;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  align-content: center;
+
+  margin-bottom: 17px;
+  border-radius: 13px;
+
+  transition: background-color 100ms, transform 400ms;
+
+  &:hover {
+    background-color: colors.$hover;
+    transform: scale(1.07, 1.07);
+  }
+
+  &:hover .widget-arrow {
+    transform: translateX(30px);
+    transition: transform 500ms;
+  }
+
+  // &:hover .backgroundIcon {
+  //     border-radius: 20px;
+  // }
+}
+
+.widget-button {
+  width: 84%;
+  height: 100%;
+  justify-content: start;
+
+  transition: background-color 100ms, transform 400ms;
+}
+
+.widget-name {
+  text-align: center;
+  padding-left: 20px;
+  color: colors.$text;
+  width: 300px;
+  position: absolute;
+  left: 170px;
+}
+
+.widget-arrow {
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.icon {
+  height: 50%;
+  width: 50%;
+}
+
+.background-icon {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 13px;
+
+  // transition: border-radius 300ms;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  justify-content: space-between;
+  width: 150px;
+  height: 50px;
+
+  position: absolute;
+  left: 0px;
+}
+
+.add-button-container {
+  @include commons.basic-shadow;
+
+  // width: 75px;
+  // height: 75px;
+  background-color: colors.$primary;
+  align-self: center;
+  border-radius: 25px;
+  margin-top: 20px;
+
+  transition: transform 500ms;
+
+  &:hover {
+    background-color: colors.$hover;
+    transform: scale(1.3, 1.3);
+  }
+
+  &:active {
+    background-color: #eb2020;
+  }
+}
+
+.add-button {
+  transition: transform 400ms;
+
+  &:hover {
+    transition-delay: 200ms;
+    transform: scale(1.3, 1.3);
+  }
+}
+
+.remove-button {
+  // margin-right: 20px;
+  margin-left: 20px;
+  // pointer-events: auto;
+
+  &:hover {
+    background-color: colors.$hover-remove;
+    transform: scale(1.3, 1.3);
+    transition: transform 400ms;
+  }
+}
+
+// Animations
+
+.fade-appear {
+  opacity: 0;
+  transition: opacity 600ms;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+}
+
+.fade-appear-active.fade-appear-done {
+  transition-delay: 0;
+}
+
+.fadeUp-appear {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.fadeUp-appear.fadeUp-appear-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 600ms, transform 600ms;
+}

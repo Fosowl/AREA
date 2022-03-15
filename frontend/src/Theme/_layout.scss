@@ -1,0 +1,118 @@
+
+/* Column Layouts */
+
+@mixin column {
+    flex-direction: column;
+}
+
+@mixin column-reverse {
+    flex-direction: column-reverse;
+}
+
+@mixin column-center {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin column-vertical-center {
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin column-horizontal-center {
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Row Layouts */
+
+@mixin row {
+    flex-direction: row;
+}
+
+@mixin row-reverse {
+    flex-direction: row-reverse;
+}
+
+@mixin row-center {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin row-vertical-center {
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin row-horizontal-center {
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* Default Layouts */
+@mixin center {
+    justify-content: center;
+    align-items: center;
+}
+@mixin align-item-center {
+    align-items: center;
+}
+@mixin center {
+    justify-content: center;
+    align-items: center;
+}
+@mixin align-item-start {
+    align-items: flex-start;
+}
+@mixin align-item-stretch {
+    align-items: stretch;
+}
+@mixin justify-content-center {
+    justify-content: center;
+}
+@mixin justify-content-around {
+    justify-content: space-around;
+}
+@mixin justify-content-between {
+    justify-content: space-between;
+}
+@mixin scroll-space-around {
+    flex-grow: 1;
+    justify-content: space-around;
+}
+@mixin scroll-space-between {
+    flex-grow: 1;
+    justify-content: space-between;
+}
+@mixin self-stretch {
+    align-self: stretch;
+}
+
+/* Sizes Layouts */
+@mixin fill {
+    flex: 1;
+}
+@mixin full-size {
+    height: 100%;
+    width: 100%;
+}
+@mixin full-width {
+    width: 100%;
+}
+@mixin full-height {
+    height: 100%;
+}
+
+/* Operation Layout */
+@mixin mirror {
+    transform: scaleX(-1);
+}
+@mixin rotate-90 {
+    transform: rotate(90);
+}
+@mixin rotate-90-inverse {
+    transform: rotate(-90);
+}

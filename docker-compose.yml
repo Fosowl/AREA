@@ -1,0 +1,58 @@
+version: '3.7'
+
+services:
+  client_web:
+    restart: always
+    container_name: client_web
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - './frontend:/app'
+      - './shared:/app/public'
+    ports:
+      - 8081:3000
+    networks:
+      - mongodb_network
+    depends_on:
+      - client_app
+      - server
+  
+  client_app:
+    restart: always
+    container_name: client_app
+    build:
+      context: ./Application
+      dockerfile: Dockerfile
+
+  server:
+    restart: always
+    container_name: server
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - './Backend:/app'
+    ports:
+      - 8080:3000
+    networks:
+      - mongodb_network
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - mongodb_network
+
+volumes:
+  mongodb:
+
+networks:
+  mongodb_network:
+    name: mongodb_network

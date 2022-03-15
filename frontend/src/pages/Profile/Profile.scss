@@ -1,0 +1,50 @@
+
+@use 'Theme/colors';
+@use 'Theme/commons';
+
+.username-txt {
+    font-size: 42px;
+    text-decoration: dashed;
+}
+
+.description-txt {
+    font-size: 32px;
+}
+
+.image-user {
+    width: 40%;
+    height: auto;
+    margin: 2em;
+    border-radius: 50px;
+}
+
+.stack-wrap {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.save-btn {
+    background-color: colors.$primary;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.delete-btn {
+    background-color: colors.$subText;
+    color: white;
+    font-size: 13px;
+    width: 140px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.logout-btn {
+    background-color: colors.$subText;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+}

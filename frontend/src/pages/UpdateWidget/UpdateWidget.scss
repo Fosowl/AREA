@@ -1,0 +1,143 @@
+
+@use 'Theme/colors';
+@use 'Theme/commons';
+
+.add-widget-page {
+    @include commons.basic-page;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.action-box {
+    border-width: 0px;
+    border-radius: 13px;
+    display: flex;
+}
+
+.reaction-box {
+    border-width: 0px;
+    border-radius: 13px;
+    display: flex;
+    width: 60%;
+}
+
+.widget-name-container {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    // margin-left: 50px;
+    align-self: center;
+    width: 93%;
+}
+
+.widget-name-field {
+    width: 30%;
+}
+
+.save-button {
+    background-color: colors.$primary;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 85px;
+    height: 40px;
+
+    &:hover {
+        background-color: colors.$hover;
+    }
+}
+
+.save-button-text {
+    font-size: 14px;
+    color: colors.$white;
+}
+
+.panel-view {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin-top: 6%;
+    // height: 100%;
+    align-self: center;
+    // align-items: center;
+    justify-content: space-between;
+    // margin-bottom: 80px;
+}
+
+.when-image {
+    width: 250px;
+    // height: 20%;
+    margin-left: 100px;
+    // margin-bottom: 10px;
+}
+
+.do-image {
+    width: 120px;
+    height: 40px;
+    margin-left: 60px;
+    // margin-bottom: 10px;
+}
+
+
+/* This fires as soon as the element enters the dorm */
+.touchable-enter.action-box {
+  /*We give the list the initial dimension of the list button*/
+    // transition: width 1000ms;
+    width: 60%;
+}
+/* This is where we can add the transition*/
+.touchable-enter-active.action-box {
+    width: 100%;
+    transition: width 500ms;
+}
+
+.touchable-enter-done.action-box {
+    width: 100%;
+}
+
+/* This fires as soon as the this.state.showList is false */
+.touchable-exit.action-box {
+    width: 100%;
+}
+
+/* fires as element leaves the DOM*/
+.touchable-exit-active.action-box {
+    width: 60%;
+    transition: width 500ms;
+}
+
+.touchable-exit-done.action-box {
+    width: 60%;
+}
+
+
+.touchable-enter.reaction-box {
+    /*We give the list the initial dimension of the list button*/
+      // transition: width 1000ms;
+      width: 60%;
+  }
+  /* This is where we can add the transition*/
+  .touchable-enter-active.reaction-box {
+      width: 100%;
+      transition: width 500ms;
+  }
+  
+  .touchable-enter-done.reaction-box {
+      width: 100%;
+  }
+  
+  /* This fires as soon as the this.state.showList is false */
+  .touchable-exit.reaction-box {
+      width: 100%;
+  }
+  
+  /* fires as element leaves the DOM*/
+  .touchable-exit-active.reaction-box {
+      width: 60%;
+      transition: width 500ms;
+  }
+  
+  .touchable-exit-done.reaction-box {
+      width: 60%;
+  }
+  

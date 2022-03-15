@@ -1,0 +1,25 @@
+
+@use 'Theme/colors';
+@use 'Theme/fonts.scss';
+
+.main {
+    // display: flex;
+    // flex: 1;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.name {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: fonts.$primary;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.description {
+    padding-top: 8px;
+    font-size: 13px;
+    text-align: left;
+}

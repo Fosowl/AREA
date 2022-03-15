@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Area",
+    "slug": "Area",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "privacy": "public",
+    "description": "AREA Project",
+    "icon": "./assets/hut.png",
+    "splash": {
+      "image": "./assets/hut.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/hut.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.qu35t3190.Area"
+    },
+    "web": {
+      "favicon": "./assets/hut.png"
+    }
+  }
+}
