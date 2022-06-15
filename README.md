@@ -1,4 +1,4 @@
 # AREA
 Project made using ReactJS, NodeJS and React native.
 
-description will be updated soon ...
+Made by QU35T, Fosowl, smbss1, Julie
